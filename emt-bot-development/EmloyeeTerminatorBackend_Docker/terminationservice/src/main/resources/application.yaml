@@ -1,0 +1,28 @@
+server:
+  port: 9002
+
+# docker network inspect <network_name> => gives info of containers running in the network
+# In data source url, 172.18.0.4:3306 is the ip address of the localmysql in docker container
+spring:
+  datasource:
+    url: jdbc:mysql://172.18.0.4:3306/exit_flow?createDatabaseIfNotExist=true
+    username: root
+    password: R@ju.kr50
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: termination-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+eureka:
+  instance:
+    hostname: ${EUREKA_HOST:localhost}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
+

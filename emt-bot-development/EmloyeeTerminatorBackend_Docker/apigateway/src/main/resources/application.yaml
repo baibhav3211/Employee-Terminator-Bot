@@ -1,0 +1,31 @@
+server:
+  port: 8765
+spring:
+  application:
+    name: api-gateway-service
+
+  cloud:
+    gateway:
+      routes:
+        - id: auth-route
+          uri: "lb://auth-service"
+          predicates:
+            - Path=/api/v1/auth/**
+        - id: termination-route
+          uri: "lb://termination-service"
+          predicates:
+            - Path=/api/v1/termination/**
+        - id: user_route
+          uri: "lb://user-service"
+          predicates:
+            - Path=/api/v1/**
+
+
+eureka:
+  instance:
+    hostname: ${EUREKA_HOST:localhost}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/

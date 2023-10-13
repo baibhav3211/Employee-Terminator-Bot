@@ -1,0 +1,7 @@
+/* Hide the chatbot on small screens */
+@media (max-width: 575px) {
+    .chatbot {
+      display: none;
+    }
+  }
+  

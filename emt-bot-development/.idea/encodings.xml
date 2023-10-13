@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/EmloyeeTerminatorBackend/apigateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmloyeeTerminatorBackend/authservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmloyeeTerminatorBackend/notificationservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmloyeeTerminatorBackend/srd/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmloyeeTerminatorBackend/terminationservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmloyeeTerminatorBackend/userservice/src/main/java" charset="UTF-8" />
+  </component>
+</project>
